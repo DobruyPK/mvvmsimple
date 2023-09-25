@@ -43,6 +43,7 @@ class LoginView: UIView{
             make.height.equalTo(30)
         })
         login.backgroundColor = .white
+        login.textColor = .black
         
         addSubview(password)
         password.snp.makeConstraints({(make) in
@@ -52,6 +53,7 @@ class LoginView: UIView{
             make.height.equalTo(30)
         })
         password.backgroundColor = .white
+        password.textColor = .black
         
         addSubview(statusText)
         statusText.snp.makeConstraints({(make) in

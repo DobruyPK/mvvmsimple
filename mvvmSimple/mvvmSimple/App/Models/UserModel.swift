@@ -1,22 +1,20 @@
-//
-//  UserModel.swift
-//  mvvmSimple
-//
-//  Created by Семен Трифонов on 25.09.2023.
-//
-
 import Foundation
 
-struct User{
-    let username: String
-    let login: String
-    let password: String
+class User{
+    let username: String?
+    let login: String?
+    let password: String?
+    init(_ username: String? = nil, _ login: String? = nil, _ password: String? = nil) {
+        self.username = username
+        self.login = login
+        self.password = password
+    }
 }
 
 extension User{
     static var users = [
-        User(username: "Vasya", login: "Vasya", password: "1234"),
-        User(username: "Petya", login: "Petya", password: "1234"),
+        User("Vasya", "Vasya", "1234"),
+        User("Petya", "Petya", "1234"),
     ]
 }
 

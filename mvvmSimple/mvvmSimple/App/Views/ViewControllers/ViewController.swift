@@ -1,19 +1,16 @@
-//
-//  ViewController.swift
-//  mvvmSimple
-//
-//  Created by Семен Трифонов on 25.09.2023.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
-    var viewModel: ViewModel = ViewModel()
-    var statusText: UILabel = UILabel()
     var loginScreen: LoginView = LoginView()
+    var delegate: LoginVCDelegate?
+    var loginViewModel: ViewModel =  ViewModel()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.delegate = self.loginViewModel
+        
         view.backgroundColor = .red
         view.addSubview(loginScreen)
         loginScreen.snp.makeConstraints({(make) in
@@ -21,19 +18,20 @@ class ViewController: UIViewController {
             make.height.equalToSuperview()
             make.width.equalToSuperview()
         })
-        
-        bindViewModel()
-        // Do any additional setup after loading the view.
-    }
     
-    func bindViewModel(){
-        viewModel.statustext.bind({(statsText) in
-            DispatchQueue.main.async {
-                self.statusText.text = statsText
-            }
-        })
+        loginScreen.deligate = self
     }
+}
 
-
+extension ViewController: LoginViewDelegate{
+    func butonTapped(login: String, password: String) -> String {
+        if let resValidion = delegate?.checkValidCredisinals(login: login, password: password){
+            if resValidion{
+                return "OK"
+            }
+            return "SMTH WRONG!!!!"
+        }
+        return "SMTH WRONG!!!!"
+    }
 }
 

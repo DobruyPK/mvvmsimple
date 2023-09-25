@@ -11,6 +11,11 @@
 		A55463172AC19124004B86E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55463162AC19124004B86E0 /* SceneDelegate.swift */; };
 		A55463192AC19124004B86E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55463182AC19124004B86E0 /* ViewController.swift */; };
 		A554631E2AC19125004B86E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A554631D2AC19125004B86E0 /* Assets.xcassets */; };
+		A554632A2AC1945B004B86E0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A55463292AC1945B004B86E0 /* SnapKit */; };
+		A55463352AC197B5004B86E0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55463342AC197B5004B86E0 /* UserModel.swift */; };
+		A55463372AC19913004B86E0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55463362AC19913004B86E0 /* ViewModel.swift */; };
+		A554633A2AC1997D004B86E0 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55463392AC1997D004B86E0 /* Dynamic.swift */; };
+		A554633D2AC1A0B5004B86E0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554633C2AC1A0B5004B86E0 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,10 @@
 		A55463182AC19124004B86E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A554631D2AC19125004B86E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A55463222AC19125004B86E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A55463342AC197B5004B86E0 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A55463362AC19913004B86E0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A55463392AC1997D004B86E0 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		A554633C2AC1A0B5004B86E0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A554632A2AC1945B004B86E0 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,13 +62,89 @@
 		A55463132AC19124004B86E0 /* mvvmSimple */ = {
 			isa = PBXGroup;
 			children = (
-				A55463142AC19124004B86E0 /* AppDelegate.swift */,
-				A55463162AC19124004B86E0 /* SceneDelegate.swift */,
-				A55463182AC19124004B86E0 /* ViewController.swift */,
-				A554631D2AC19125004B86E0 /* Assets.xcassets */,
-				A55463222AC19125004B86E0 /* Info.plist */,
+				A554632D2AC19563004B86E0 /* App */,
+				A554632C2AC1949C004B86E0 /* Resoureces */,
+				A554632B2AC19461004B86E0 /* Application */,
 			);
 			path = mvvmSimple;
+			sourceTree = "<group>";
+		};
+		A554632B2AC19461004B86E0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A55463162AC19124004B86E0 /* SceneDelegate.swift */,
+				A55463142AC19124004B86E0 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A554632C2AC1949C004B86E0 /* Resoureces */ = {
+			isa = PBXGroup;
+			children = (
+				A55463222AC19125004B86E0 /* Info.plist */,
+				A554631D2AC19125004B86E0 /* Assets.xcassets */,
+			);
+			path = Resoureces;
+			sourceTree = "<group>";
+		};
+		A554632D2AC19563004B86E0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A55463322AC19737004B86E0 /* ViewsModel */,
+				A55463312AC19724004B86E0 /* Views */,
+				A55463302AC19711004B86E0 /* Models */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A55463302AC19711004B86E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A55463342AC197B5004B86E0 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A55463312AC19724004B86E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A554633B2AC1A09D004B86E0 /* Views */,
+				A55463332AC19776004B86E0 /* ViewControllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A55463322AC19737004B86E0 /* ViewsModel */ = {
+			isa = PBXGroup;
+			children = (
+				A55463382AC19962004B86E0 /* Bindings */,
+				A55463362AC19913004B86E0 /* ViewModel.swift */,
+			);
+			path = ViewsModel;
+			sourceTree = "<group>";
+		};
+		A55463332AC19776004B86E0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A55463182AC19124004B86E0 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A55463382AC19962004B86E0 /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				A55463392AC1997D004B86E0 /* Dynamic.swift */,
+			);
+			path = Bindings;
+			sourceTree = "<group>";
+		};
+		A554633B2AC1A09D004B86E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A554633C2AC1A0B5004B86E0 /* LoginView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +163,9 @@
 			dependencies = (
 			);
 			name = mvvmSimple;
+			packageProductDependencies = (
+				A55463292AC1945B004B86E0 /* SnapKit */,
+			);
 			productName = mvvmSimple;
 			productReference = A55463112AC19124004B86E0 /* mvvmSimple.app */;
 			productType = "com.apple.product-type.application";
@@ -105,6 +194,9 @@
 				Base,
 			);
 			mainGroup = A55463082AC19124004B86E0;
+			packageReferences = (
+				A55463282AC1945B004B86E0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A55463122AC19124004B86E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,8 +222,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55463372AC19913004B86E0 /* ViewModel.swift in Sources */,
+				A554633D2AC1A0B5004B86E0 /* LoginView.swift in Sources */,
 				A55463192AC19124004B86E0 /* ViewController.swift in Sources */,
 				A55463152AC19124004B86E0 /* AppDelegate.swift in Sources */,
+				A554633A2AC1997D004B86E0 /* Dynamic.swift in Sources */,
+				A55463352AC197B5004B86E0 /* UserModel.swift in Sources */,
 				A55463172AC19124004B86E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +358,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QS3Z6YCTJ8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = mvvmSimple/Info.plist;
+				INFOPLIST_FILE = mvvmSimple/Resoureces/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -290,7 +386,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QS3Z6YCTJ8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = mvvmSimple/Info.plist;
+				INFOPLIST_FILE = mvvmSimple/Resoureces/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -331,6 +427,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A55463282AC1945B004B86E0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A55463292AC1945B004B86E0 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A55463282AC1945B004B86E0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A55463092AC19124004B86E0 /* Project object */;
 }

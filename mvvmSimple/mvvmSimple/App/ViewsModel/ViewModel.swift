@@ -8,14 +8,12 @@
 import Foundation
 
 class ViewModel: LoginVCDelegate{
-    var viewController: ViewController = ViewController()
-    var delegat: ViewModelDeligate? = User() as? ViewModelDeligate
+    var users = User.users
+    
     func checkValidCredisinals(login: String, password: String) -> Bool {
-        if let users = self.delegat?.users{
-            for user in users{
-                if user.login == login && user.password == password{
-                    return true
-                }
+        for user in self.users{
+            if user.login == login && user.password == password{
+                return true
             }
         }
         return false

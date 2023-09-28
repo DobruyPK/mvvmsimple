@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LoginVCDelegate{
-    func checkValidCredisinals(login:String, password:String)-> Bool
+    func checkValidCredisinalsString(login:String, password:String)-> String
 }

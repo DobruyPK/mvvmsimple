@@ -1,22 +1,12 @@
-//
-//  ViewModel.swift
-//  mvvmSimple
-//
-//  Created by Семен Трифонов on 25.09.2023.
-//
-
 import Foundation
 
-class ViewModel: LoginVCDelegate{
-    var users = User.users
-    
-    func checkValidCredisinals(login: String, password: String) -> Bool {
-        for user in self.users{
-            if user.login == login && user.password == password{
-                return true
-            }
-        }
-        return false
-    }
+class ViewModel{
+    var deleagate: ViewModelDeligate?
+
 }
 
+extension ViewModel: ViewModelDeligate{
+    func validation(login: String, password: String) -> Bool {
+        return ((deleagate?.validation(login: login, password: password)) != nil)
+    }
+}

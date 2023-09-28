@@ -8,10 +8,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.delegate = self.loginViewModel
-        
-        view.backgroundColor = .red
+        view.backgroundColor = .gray
         view.addSubview(loginScreen)
         loginScreen.snp.makeConstraints({(make) in
             make.top.equalToSuperview()
@@ -25,13 +22,7 @@ class ViewController: UIViewController {
 
 extension ViewController: LoginViewDelegate{
     func butonTapped(login: String, password: String) -> String {
-        if let resValidion = delegate?.checkValidCredisinals(login: login, password: password){
-            if resValidion{
-                return "OK"
-            }
-            return "SMTH WRONG!!!!"
-        }
-        return "SMTH WRONG!!!!"
+        return delegate?.checkValidCredisinalsString(login: login, password: password) ?? "SMTH ERRORR"
     }
 }
 

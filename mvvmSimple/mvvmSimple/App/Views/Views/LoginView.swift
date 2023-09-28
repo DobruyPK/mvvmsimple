@@ -78,9 +78,10 @@ class LoginView: UIView{
         button.backgroundColor = .gray
         button.setTitle("LOGIN", for: .normal)
         button.addTarget(self, action: #selector(butonTapped), for: .touchUpInside)
+        button.layer.borderColor = CGColor.init(red: 100, green: 0, blue: 0, alpha: 100)
+        button.layer.borderWidth = 10
     }
     @objc func butonTapped(){
-        
         statusText.text = deligate?.butonTapped(login: login.text ?? "", password: password.text ?? "")
         statusText.isHidden = false
         statusText.isUserInteractionEnabled = true

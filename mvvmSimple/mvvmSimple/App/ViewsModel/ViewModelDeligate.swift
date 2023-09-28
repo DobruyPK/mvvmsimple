@@ -9,5 +9,5 @@ import Foundation
 
 
 protocol ViewModelDeligate{
-    var users: [User] {get}
+    func validation(login: String, password: String) -> Bool
 }
